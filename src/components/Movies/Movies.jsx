@@ -2,19 +2,26 @@ import React from "react";
 import Movie from "../Movie/Movie";
 import styles from "./Movies.module.css";
 
-export default function Movies({ movies, getMovieDetail }) {
+export default function Movies({ movies, getMovieDetail, addToFavorites }) {
   return (
     <div className={styles.moviesContainer}>
-      {movies.map((movie) => (
-        <Movie
-          key={movie.imdbID}
-          id={movie.imdbID}
-          title={movie.Title}
-          year={movie.Year}
-          poster={movie.Poster}
-          getMovieDetail={() => getMovieDetail(movie.imdbID)}
-        />
-      ))}
+      {movies &&
+        movies.map((movie) => (
+          <div key={movie.imdbID} className={styles.movieContainer}>
+            <Movie
+              id={movie.imdbID}
+              title={movie.Title}
+              poster={movie.Poster}
+              getMovieDetail={() => getMovieDetail(movie.imdbID)}
+            />
+            <button
+              className={styles.favButton}
+              onClick={() => addToFavorites(movie)}
+            >
+              ❤
+            </button>
+          </div>
+        ))}
     </div>
   );
 }

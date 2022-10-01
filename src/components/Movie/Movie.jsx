@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./Movie.module.css";
 
-export default function Movie({ title, year, poster, id, getMovieDetail }) {
+export default function Movie({ title, poster, id, getMovieDetail }) {
   return (
     <article className={styles.movieContainer}>
       <NavLink

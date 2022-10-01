@@ -6,3 +6,27 @@
   gap: 20px;
   margin-bottom: 20px;
 }
+
+.movieContainer {
+  position: relative;
+}
+
+.favButton {
+  color: red;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  font-size: 20px;
+  top: -20px;
+  left: -20px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+.movieContainer:hover .favButton {
+  opacity: 1;
+}
+
+.favButton:hover {
+  cursor: pointer;
+}

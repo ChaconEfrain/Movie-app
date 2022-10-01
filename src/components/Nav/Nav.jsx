@@ -10,13 +10,23 @@ export default function Nav({ getMovies }) {
     <div className={styles.navContainer}>
       <nav className={styles.navBar}>
         <div className={styles.navMenu}>
-          <h1>The movie App</h1>
-          <NavLink className={styles.home} to="/">
+          <div className={styles.appLogo}>
+            <h1>The movie App</h1>
+            <img
+              className={styles.movieImage}
+              src="https://www.pngmart.com/files/5/Movie-PNG-Image.png"
+              alt="Pop corn and movie image"
+            />
+          </div>
+          <NavLink className={styles.navItem} to="/">
             <span>Home</span>
           </NavLink>
-          <span className={styles.home} onClick={() => setAbout(true)}>
+          <span className={styles.navItem} onClick={() => setAbout(true)}>
             About
           </span>
+          <NavLink className={styles.navItem} to="/favorites">
+            <span>Favorites</span>
+          </NavLink>
         </div>
         <form
           onSubmit={(e) => {

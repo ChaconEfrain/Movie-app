@@ -1,5 +1,5 @@
 .container {
-  position: absolute;
+  position: fixed;
   display: flex;
   border: none;
   background-color: #22223b;
