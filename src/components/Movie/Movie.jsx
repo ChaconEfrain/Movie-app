@@ -12,10 +12,16 @@ export default function Movie({ title, year, poster, id, getMovieDetail }) {
       >
         <aside className={styles.sidebar}>Details →</aside>
       </NavLink>
-      <img src={poster} alt={title} />
+      <img
+        src={
+          poster !== "N/A"
+            ? poster
+            : "https://store-images.microsoft.com/image/apps.46713.13510798886206986.e1e7e0cb-5610-4e39-bcf7-7ea0d34190c6.1e099cc1-5726-4cc4-9a8a-f9944fad66e3"
+        }
+        alt={title}
+      />
       <footer className={styles.movieInfo}>
         <span>{title}</span>
-        <span>{year}</span>
       </footer>
     </article>
   );

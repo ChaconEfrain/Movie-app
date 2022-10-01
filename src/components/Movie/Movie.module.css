@@ -14,17 +14,19 @@
 
 .movieInfo {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin: 0 10px;
+  /* margin: 0 10px; */
   color: white;
+  width: 300px;
 }
 
 .movieContainer {
   position: relative;
   border: none;
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
   background-color: #22223b;
+  height: 450px;
 }
 
 .movieContainer:hover .sidebar {

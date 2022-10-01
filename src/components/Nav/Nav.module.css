@@ -2,8 +2,17 @@
   background-color: #22223b;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 15px 15px;
   margin-bottom: 20px;
+}
+
+.navMenu {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  height: 30px;
+  color: white;
 }
 
 .home {
@@ -13,6 +22,7 @@
 
 .home:hover {
   color: #40798c;
+  cursor: pointer;
 }
 
 .search {
@@ -20,4 +30,66 @@
   border: none;
   border-radius: 10px;
   padding: 5px 10px;
+}
+
+.search::placeholder {
+  color: #22223b;
+}
+
+.aboutContainer {
+  position: fixed;
+  background-color: #22223bd0;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+}
+
+.aboutContainer:hover .closeAbout {
+  opacity: 1;
+}
+
+.aboutContainer p {
+  color: white;
+  line-height: 25px;
+}
+
+.closeAbout {
+  background-color: transparent;
+  color: white;
+  opacity: 0;
+  position: absolute;
+  top: -30px;
+  right: -20px;
+  border: none;
+  font-size: 30px;
+}
+
+.closeAbout:hover {
+  cursor: pointer;
+}
+
+.overlayNotShow {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.732);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+
+.overlayShow {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.732);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  z-index: 1;
+}
+
+html {
+  position: relative;
 }
