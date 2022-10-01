@@ -1,0 +1,40 @@
+.sidebar {
+  background-color: rgba(0, 0, 0, 0.466);
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+.movieInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px;
+  color: white;
+}
+
+.movieContainer {
+  position: relative;
+  border: none;
+  padding-bottom: 10px;
+  background-color: #22223b;
+}
+
+.movieContainer:hover .sidebar {
+  opacity: 1;
+}
+
+.detailsLink {
+  color: white;
+}
+
+img {
+  width: 300px;
+}
